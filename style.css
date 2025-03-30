@@ -11,6 +11,7 @@
 
 .remove-filter:hover {
     background-color: #2C3A3A;
+    color: white;
 }
 
 @media (max-width: 640px) {
