@@ -1,3 +1,7 @@
+#filter-bar {
+    margin: auto;
+}
+
 @media (max-width: 640px) {
     header #bg-header {
         display: none;
