@@ -1,0 +1,70 @@
+@media (max-width: 640px) {
+    header #bg-header {
+        display: none;
+    }
+
+    .job-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        margin: 40px auto;
+    }
+
+    .job-card div {
+        width: 100% !important;
+    }
+
+    .job-card .image {
+        position: absolute;
+        top: -20px;
+    }
+
+    .tags {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+    header #bg-header-mobile {
+        display: none;
+    }
+
+    .job-card {
+        flex-direction: row;
+        align-items: center;
+        padding: 20px;
+        margin: 40px auto;
+
+    }
+
+    .job-card div {
+        width: 100% !important;
+    }
+
+    .job-card .image {
+        width: 50px;
+    }
+
+    .job-card .company-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tags {
+        flex-wrap: wrap;
+        align-items: flex-end;
+        gap: 10px;
+    }
+
+    .job-card :nth-last-child(4) {
+        align-items: flex-end;
+    }
+}
+
+@media (min-width: 1024px) {
+    .job-card {
+        flex-direction: row;
+        align-items: center;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
+    <title>Document</title>
+</head>
+<body class="bg-[#EFFAFA]">
+    <header class="h-[20%] lg:h-[10%] w-full bg-[#5ba4a4] mx-auto relative">
+        <!-- Background Image -->
+        <img src="/images/bg-header-desktop.svg" alt="" class="w-full" id="bg-header">
+        <img src="/Images/bg-header-mobile.svg" alt="" class="w-full lg:hidden" id="bg-header-mobile">
+
+        <!-- Filter Bar -->
+        <div id="filter-bar" class="w-[90%] md:w-[80%] mx-auto absolute left-1/2 bottom-0 -translate-x-1/2 translate-y-1/3 z-10"></div>
+    </header>
+
+    <main class="w-[90%] md:w-[80%] mt-20 mx-auto space-y-6 m-auto" id="job-list">
+        <!-- Job Cards -->
+        <div class="job-card flex items-center w-full bg-white rounded-lg p-6 m-4 shadow-[0_8px_12px_rgba(91,164,164,0.2)] space-y-4 md:space-y-0 relative">
+            <div class="w-[10%] mr-10 image">
+                <img src="images/photosnap.svg" alt="" class="w-[10%] md:w-full lg:w-full">
+            </div>
+            <div class="lg:w-[20%] space-y-2 flex-grow mt-4 md:mt-0">
+                <div class="flex items-center space-x-2">
+                    <h4 class="text-base text-[#5ba4a4] font-bold">Photosnap</h4>
+                    <span class="bg-[#5ba4a4] text-[15px] text-white px-2 py-1 text-justify rounded-full">NEW!</span>
+                    <span class="bg-[#2C3A3A] text-[15px] text-white px-2 py-1 text-justify rounded-full">FEATURED</span>
+                </div>
+                <div>
+                    <h1 class="font-bold text-xl text-[#2C3A3A]">Senior Frontend Developer</h1>
+                </div>
+                <span class="text-[#7B8E8E] text-base">1d ago • Full Time • USA only</span>
+            </div>
+            <div class="w-[80%] border border-gray-400 md:hidden"></div>
+            <div class="tags flex items-center space-x-4">
+                <span class="text-[#5ba4a4] bg-[#EFFAFA] p-2 font-semibold">Frontend</span>
+                <span class="text-[#5ba4a4] bg-[#EFFAFA] p-2 font-semibold">Senior</span>
+                <span class="text-[#5ba4a4] bg-[#EFFAFA] p-2 font-semibold">HTML</span>
+                <span class="text-[#5ba4a4] bg-[#EFFAFA] p-2 font-semibold">CSS</span>
+                <span class="text-[#5ba4a4] bg-[#EFFAFA] p-2 font-semibold">JavaScript</span>     
+            </div>
+        </div>    
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
