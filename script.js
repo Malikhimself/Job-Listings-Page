@@ -43,10 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                     <div class="w-[80%] border  border-gray-400 md:hidden"></div>
                     <div class="tags flex flex-wrap items-center space-x-4">
-                        <span class="tag text-[#5ba4a4] bg-[#EFFAFA] p-2 font-semibold cursor-pointer hover:outline-2 hover:outline-[#5BA4A4] active:outline-2 active:outline-[#5BA4A4] rounded-sm" data-filter="${eachData.role}">${eachData.role}</span>
-                        <span class="tag text-[#5ba4a4] bg-[#EFFAFA] p-2 font-semibold cursor-pointer hover:outline-2 hover:outline-[#5BA4A4] active:outline-2 active:outline-[#5BA4A4] rounded-sm" data-filter="${eachData.level}">${eachData.level}</span>
-                        ${eachData.languages.map(lang => `<span class="tag bg-[#EFFAFA] text-[#5ba4a4] p-2 font-semibold mr-3 cursor-pointer hover:outline-2 hover:outline-[#5BA4A4] active:outline-2 active:outline-[#5BA4A4] rounded-sm" data-filter="${lang}">${lang}</span>`).join('')}
-                        ${eachData.tools.map(tool => `<span class="tag bg-[#EFFAFA] text-[#5ba4a4] p-2 font-semibold mr-3 cursor-pointer hover:outline-2 hover:outline-[#5BA4A4] active:outline-2 active:outline-[#5BA4A4] rounded-sm" data-filter="${tool}">${tool}</span>`).join('')}               
+                        <span class="tag text-[#5ba4a4] bg-[#EFFAFA] p-2 font-semibold cursor-pointer hover:bg-[#5BA4A4] hover:text-white rounded-sm" data-filter="${eachData.role}">${eachData.role}</span>
+                        <span class="tag text-[#5ba4a4] bg-[#EFFAFA] p-2 font-semibold cursor-pointer hover:bg-[#5BA4A4] hover:text-white rounded-sm" data-filter="${eachData.level}">${eachData.level}</span>
+                        ${eachData.languages.map(lang => `<span class="tag bg-[#EFFAFA] text-[#5ba4a4] p-2 font-semibold mr-3 cursor-pointer hover:bg-[#5BA4A4] hover:text-white rounded-sm" data-filter="${lang}">${lang}</span>`).join('')}
+                        ${eachData.tools.map(tool => `<span class="tag bg-[#EFFAFA] text-[#5ba4a4] p-2 font-semibold mr-3 cursor-pointer hover:bg-[#5BA4A4] hover:text-white rounded-sm" data-filter="${tool}">${tool}</span>`).join('')}               
                     </div>
                 </div>
             `
@@ -72,13 +72,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="filter-container bg-white p-4 w-full rounded-lg flex justify-between items-center shadow-md">
                     <div class="flex flex-wrap gap-2">
                         ${Array.from(filters).map(filter => `
-                            <span class="filter-item bg-[#EFFAFA] text-[#5ba4a4] font-semibold px-2 py-1 rounded-md flex items-center">
-                                ${filter}
-                                <button class="ml-2 bg-[#5ba4a4] px-2 py-1 text-white remove-filter" data-filter="${filter}">✖</button>
+                            <span class="filter-item bg-[#EFFAFA] font-semibold rounded-md flex items-center overflow-hidden">
+                                <div class="text-[#5ba4a4] px-2">${filter}</div>
+                                <button class="ml-2 bg-[#5ba4a4] px-4 py-2 text-white cursor-pointer flex-grow h-full remove-filter" data-filter="${filter}">✖</button>
                             </span>
                         `).join("")}
                     </div>
-                    <button id="clear-filters" class="text-[#5ba4a4] font-bold hover:underline underline-offset-2">Clear</button>
+                    <button id="clear-filters" class="text-[#5ba4a4] font-bold hover:underline underline-offset-2 cursor-pointer">Clear</button>
                 </div>
             `;
             addFilterRemovalListeners();
